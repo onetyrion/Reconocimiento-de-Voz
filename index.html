@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        
+        <title>Reconocimiento de voz con Web Speech API</title>
+        <style>
+            body {
+                display: block;
+                padding-top: 10%;
+                background: #7F00FF;  /* Navegadores antiguos */
+                background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            }
+            .textarea{
+                width: 50%;
+            }
+            .footer{
+                color:white;
+                margin-bottom: 0%;
+            }
+        </style>
+
+      </head>
+<body class="d-flex justify-content-center align-items-center flex-column">
+    <div>
+        <button id="btnStartRecon" class="btn btn-danger"><strong>Empezar a reconocer voz</strong></button>
+        <button id="btnStopRecon" class="btn btn-info"><strong>Parar el reconocimiento</strong></button>
+    </div>
+    <br>
+        <textarea name="textRecon" class="form-control textarea" id="textRecon" cols="40" rows="10">
+        </textarea>
+        <div class="footer">
+            by <a href="https://github.com/onetyrion">onetyrion</a>
+        </div>
+    <script src="app.js"></script>
+</body>
+</html>
