@@ -21,18 +21,17 @@ const TextRecon = document.getElementById("textRecon");
 recon.lang = 'es-ES';
 recon.continuous = true;
 recon.interimResults = false;
-console.log(recon);
+console.log("Fix#01");
 
 //Evento que devuelve el texto cuando se para de hablar
 recon.onresult = (event) => {
-    console.log(event);
     const result = event.result;
     console.log(result);
 }
-recon.onerror = function(event) {
-    // TextRecon.textContent = 'Error occurred in recognition: ' + event.error;
-    alert('Error occurred in recognition: ' + event.error);
-}   
+// recon.onerror = function(event) {
+//     // TextRecon.textContent = 'Error occurred in recognition: ' + event.error;
+//     alert('Error occurred in recognition: ' + event.error);
+// }   
 
 //Evento que empieza y detiene la grabación
 btnStartRecon.addEventListener('click', ()=>{
