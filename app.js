@@ -28,10 +28,13 @@ recon.onresult = (event) => {
     console.log(text);
     TextRecon.value += text;
 }
-// recon.onerror = function(event) {
-//     // TextRecon.textContent = 'Error occurred in recognition: ' + event.error;
-//     alert('Error occurred in recognition: ' + event.error);
-// }   
+recon.onerror = (event) => {
+    // TextRecon.textContent = 'Error occurred in recognition: ' + event.error;
+    alert('Ha ocurrido un error en el reconocimiento: ' + event.error);
+}   
+recon.onend = (event) => {
+    console.log('El mic deja de escuchar')
+}
 
 //Evento que empieza y detiene la grabación
 btnStartRecon.addEventListener('click', ()=>{
