@@ -20,7 +20,7 @@ const textRecon = document.getElementById("textRecon");
 recon.lang = 'es-ES';
 recon.continuous = true;
 recon.interimResults = false;
-console.log("Fix#03");
+console.log("Fix#04");
 
 //Evento que devuelve el texto cuando se para de hablar
 recon.onresult = (event) => {
