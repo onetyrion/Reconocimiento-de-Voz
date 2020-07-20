@@ -29,13 +29,16 @@ recon.onresult = (event) => {
     const result = event.result;
     console.log(result);
 }
+recon.onerror = function(event) {
+    message.textContent = 'Error occurred in recognition: ' + event.error;
+}   
 
 //Evento que empieza y detiene la grabación
-btnStartRecon.addEventListener('click',()=>{
-    recon.start();
+btnStartRecon.addEventListener('click', function(){
     console.log("Start");
+    recon.start();
 });
-btnStopRecon.addEventListener('click',()=>{
+btnStopRecon.addEventListener('click', function(){
     recon.abort();
     console.log("Stop");
 });
