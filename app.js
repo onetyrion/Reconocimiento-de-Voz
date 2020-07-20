@@ -25,6 +25,7 @@ console.log(recon);
 
 //Evento que devuelve el texto cuando se para de hablar
 recon.onresult = (event) => {
+    console.log(event);
     const result = event.result;
     console.log(result);
 }
@@ -32,8 +33,9 @@ recon.onresult = (event) => {
 //Evento que empieza y detiene la grabación
 btnStartRecon.addEventListener('click',()=>{
     recon.start();
-    console.log(recon);
+    console.log("Start");
 });
 btnStopRecon.addEventListener('click',()=>{
     recon.abort();
+    console.log("Stop");
 });
