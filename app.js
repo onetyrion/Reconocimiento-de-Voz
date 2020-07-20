@@ -9,7 +9,8 @@ let recon = new webkitSpeechRecognition();
 
 const btnStartRecon = document.getElementById("btnStartRecon");
 const btnStopRecon = document.getElementById("btnStopRecon");
-const TextRecon = document.getElementById("textRecon");
+const btntextRepeat = document.getElementById("btnRepeatRecon");
+const textRecon = document.getElementById("textRecon");
 
 
 //se configura con:
@@ -19,17 +20,16 @@ const TextRecon = document.getElementById("textRecon");
 recon.lang = 'es-ES';
 recon.continuous = true;
 recon.interimResults = false;
-console.log("Fix#02");
+console.log("Fix#03");
 
 //Evento que devuelve el texto cuando se para de hablar
 recon.onresult = (event) => {
     const result = event.results;
     const text = result[result.length-1][0].transcript;
     console.log(text);
-    TextRecon.value += text;
+    textRecon.value += text;
 }
 recon.onerror = (event) => {
-    // TextRecon.textContent = 'Error occurred in recognition: ' + event.error;
     alert('Ha ocurrido un error en el reconocimiento: ' + event.error);
 }   
 recon.onend = (event) => {
@@ -45,3 +45,15 @@ btnStopRecon.addEventListener('click', ()=>{
     console.log("Stop");
     recon.abort();
 });
+btntextRepeat.addEventListener('click',()=>{
+    readText(textRecon.value)
+})
+
+function readText(texto){
+    const speech = new SpeechSynthesisUtterance();
+    speech.text = texto;
+    speech.volume = 1;
+    speech.rate = 1;
+    speech.pitch = 1;
+    window.speechSynthesis.speak(speech);
+}
