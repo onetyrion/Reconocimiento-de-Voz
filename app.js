@@ -2,9 +2,7 @@
 // Esta funciona mediante eventos como click o onchange
 
 //imports buttons and textArea
-var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
-var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
-var grammar = '#JSGF V1.0;'
+//var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
 
 //prepara la variable recon con la herramienta.
 let recon = new webkitSpeechRecognition();
@@ -39,6 +37,6 @@ btnStartRecon.addEventListener('click', ()=>{
     recon.start();
 });
 btnStopRecon.addEventListener('click', ()=>{
-    recon.abort();
     console.log("Stop");
+    recon.abort();
 });
