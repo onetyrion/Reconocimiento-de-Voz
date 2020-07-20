@@ -10,8 +10,8 @@ var grammar = '#JSGF V1.0;'
 let recon = new webkitSpeechRecognition();
 
 const btnStartRecon = document.getElementById("btnStartRecon");
-const btnStopRecon = document.getElementById("btnStartRecon");
-const TextRecon = document.getElementById("btnStartRecon");
+const btnStopRecon = document.getElementById("btnStopRecon");
+const TextRecon = document.getElementById("textRecon");
 
 
 //se configura con:
