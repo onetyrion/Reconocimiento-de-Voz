@@ -24,9 +24,9 @@ console.log("Fix#02");
 //Evento que devuelve el texto cuando se para de hablar
 recon.onresult = (event) => {
     const result = event.results;
-    const text = result[result.lengh-1] [0].transcript;
-    console.log(result);
-    TextRecon+= text;
+    const text = result[result.length-1][0].transcript;
+    console.log(text);
+    TextRecon.value += text;
 }
 // recon.onerror = function(event) {
 //     // TextRecon.textContent = 'Error occurred in recognition: ' + event.error;
