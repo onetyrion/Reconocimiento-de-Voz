@@ -19,12 +19,14 @@ const TextRecon = document.getElementById("textRecon");
 recon.lang = 'es-ES';
 recon.continuous = true;
 recon.interimResults = false;
-console.log("Fix#01");
+console.log("Fix#02");
 
 //Evento que devuelve el texto cuando se para de hablar
 recon.onresult = (event) => {
-    const result = event.result;
+    const result = event.results;
+    const text = result[result.lengh-1] [0].transcript;
     console.log(result);
+    TextRecon+= text;
 }
 // recon.onerror = function(event) {
 //     // TextRecon.textContent = 'Error occurred in recognition: ' + event.error;
